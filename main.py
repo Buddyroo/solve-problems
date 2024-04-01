@@ -1,5 +1,6 @@
 
 print("Conflict")
+a=7
         def on_date_selected():
             selected_date = cal.selection_get()
             task_listbox.set(selected_task_index, column=2, value=selected_date)
