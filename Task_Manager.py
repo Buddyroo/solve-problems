@@ -17,36 +17,28 @@ class Task():
         print(f"Задача {self.description} со сроком исполнения {self.due_date} и статусом {'В процессе' if not self.status else 'Выполнена'}")
 
 
-class Task_Manager():
 
-    def __init__(self):
-        self.task = []
+tasks_list = []
 
-    def add_task(self, task):
-        self.task.append(task)
+def add_task(task):
+    tasks_list.append(task)
 
-    def print_active(self):
-        for task in self.task:
-            if not task.status:
-                task.info()
-
-
-
+def print_active():
+    for task in tasks_list:
+        if not task.status:
+            task.info()
 
 
 task1=Task("Present monthly plan","12/24",)
 task2=Task("Prepare budget","11/24",)
 task3=Task("Renovate office space","12/25",)
 
-task_manager = Task_Manager()
 
-task_manager.add_task(task1)
-task_manager.add_task(task2)
-task_manager.add_task(task3)
+add_task(task1)
+add_task(task2)
+add_task(task3)
 
-
-
-task_manager.print_active()
+print_active()
 
 
 
