@@ -54,6 +54,9 @@ class Store:
                     print("---ОШИБКА: В поле 'Цена' должно быть введено число---")
             except Exception as e:
                 print(f"---ОШИБКА: Введите название и цену через пробел---")
+    def add_items_in_function(self, product, price):
+        self.items[product.lower()] = float(price)
+        print(f"\nТовар {product.lower()} с ценой {float(price)} был добавлен в ассортимент магазина {self.name}")
 
     def delete_items(self,product):
         deleted = self.items.pop(product.lower(),None)
@@ -87,8 +90,10 @@ class Store:
 
         
 
+
 store1 = Store("Цветочный", "Юбилейный проспект, 10")
 store1.add_items({"Пион":20,"Тюльпан":30})
+store1.add_items_in_function("гладиолус", 20)
 store1.list_products()
 
 store2 = Store("Продукты", "Улица Ленина, 10")
