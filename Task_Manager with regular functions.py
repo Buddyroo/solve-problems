@@ -46,11 +46,11 @@ def add_task(task):
 def print_active():
     active_tasks=[task for task in tasks_list if not task.status]
     if active_tasks:
-        print("\nСписок текущих задач")
+        print("\nСписок текущих задач:")
         for task in active_tasks:
             task.info()
     else:
-        print("Все задачи списка были выполнены")
+        print("\nВсе задачи списка были выполнены")
 
 
 task1 = Task("Present monthly plan", "12/24", )
