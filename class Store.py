@@ -71,6 +71,7 @@ class Store:
             print(f"\nВ магазине {self.name} цена товара {product}: {price}")
         else:
             print(f"\nТовара {product} в магазине {self.name} нет")
+        return price
 
     def price_update(self, product, price):
         if product.lower() not in self.items.keys():
